@@ -17,6 +17,10 @@ public class home extends AppCompatActivity {
         Intent i = new Intent(this,clublist.class);
         startActivity(i);
     }
+    public void fourth(View V) {
+        Intent i = new Intent(this,calendar.class);
+        startActivity(i);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

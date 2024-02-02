@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Mini3"
         tools:targetApi="31">
         <activity
+            android:name=".person"
+            android:exported="false" />
+        <activity
+            android:name=".calendar"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".home"
             android:exported="false" />
         <activity
