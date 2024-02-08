@@ -24,82 +24,59 @@
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@+id/signin"
-        android:layout_width="match_parent"
         android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signin"
         android:hint="Email"
         android:textColorHint="@color/black"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_height="wrap_content">
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/passs1"
-        android:layout_below="@+id/fullname"
-        android:hint="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fullname"
+        android:hint="Password"
         android:textColorHint="@color/black"
         app:passwordToggleEnabled="true"
-        android:textColor="@color/white"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_height="wrap_content">
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <ProgressBar
-        android:id="@+id/progessbar"
-        android:visibility="gone"
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
-
+        android:visibility="gone" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_below="@id/passs1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:textStyle="bold"
-        android:onClick="first"/>
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="195dp"
-        android:text="forgot password"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        tools:ignore="DuplicateIds" />
 
 
 </RelativeLayout>

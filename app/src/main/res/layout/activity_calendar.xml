@@ -36,27 +36,13 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold" />
-        <TextView
-            android:layout_width="411dp"
-            android:layout_height="425dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:drawableBottom="@drawable/facevent"
-            android:fitsSystemWindows="true"
-            android:text="fac club event"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="430dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="15dp"
-            android:drawableBottom="@drawable/tamilevent"
+            android:drawableBottom="@drawable/fac"
             android:text="tamilmandram events"
             android:textSize="20dp"
             android:textStyle="bold"

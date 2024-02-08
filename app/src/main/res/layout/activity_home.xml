@@ -41,6 +41,7 @@
 
 
                 <ImageView
+                    android:id="@+id/home"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/homes"
@@ -83,6 +84,7 @@
 
 
                 <ImageView
+                    android:id="@+id/clublist"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/grp"
@@ -126,6 +128,7 @@
 
 
                 <ImageView
+                    android:id="@+id/calendar"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/calender"

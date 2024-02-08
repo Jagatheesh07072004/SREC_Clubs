@@ -3,32 +3,51 @@ package com.example.mini3;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mini3.R;
 
 public class home extends AppCompatActivity {
-    public void second(View V) {
-        Intent i = new Intent(this,homepage.class);
-        startActivity(i);
-    }
-    public void third(View V) {
-        Intent i = new Intent(this,clublist.class);
-        startActivity(i);
 
-    }
-    public void fourth(View V) {
-        Intent i = new Intent(this,calendar.class);
-        startActivity(i);
-
-    }
+    ImageView homebtn;
+    ImageView clublistbtn;
+    ImageView calbtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        homebtn=findViewById(R.id.home);
+        clublistbtn=findViewById(R.id.clublist);
+        calbtn=findViewById(R.id.calendar);
+
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(home.this, homepage.class);
+                startActivity(intent);
+            }
+        });
+
+        clublistbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(home.this, clublist.class);
+                startActivity(intent);
+            }
+        });
+        calbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(home.this, calendar.class);
+                startActivity(intent);
+            }
+        });
 
         // Add any additional initialization or logic for the Home activity here
     }
