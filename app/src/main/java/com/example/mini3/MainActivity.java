@@ -1,5 +1,6 @@
 package com.example.mini3;
 
+import static android.content.ContentValues.TAG;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +21,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -50,29 +53,26 @@ import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
-    ListView listview;
-
-    TextInputLayout fullName,password;
+    TextInputLayout fullName, password;
     Button login;
     private FirebaseAuth firebaseAuth;
     Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        fullName=findViewById(R.id.fullname);
-        password=findViewById(R.id.passs1);
-        login=findViewById(R.id.button);
+        fullName = findViewById(R.id.fullname);
+        password = findViewById(R.id.passs1);
+        login = findViewById(R.id.loginButton);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!ValidateFullname()|!ValidatePassword()){
-
-                }else{
-
+                if (!ValidateFullname() | !ValidatePassword()) {
+                } else {
                     loginUser();
                 }
             }
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loginUser(){
-        String userUserName=fullName.getEditText().getText().toString().trim();
-        String userPassword=password.getEditText().getText().toString().trim();
+    public void loginUser() {
+        String userUserName = fullName.getEditText().getText().toString().trim();
+        String userPassword = password.getEditText().getText().toString().trim();
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(userUserName, userPassword)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -98,20 +98,21 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 
-    private Boolean ValidateFullname(){
-        String val=fullName.getEditText().getText().toString();
+    private Boolean ValidateFullname() {
+        String val = fullName.getEditText().getText().toString();
 
-        if (val.isEmpty()){
+        if (val.isEmpty()) {
             fullName.setError("UserId cannot be Empty");
             return false;
-        }
-        else{
+        } else {
             fullName.setError(null);
             return true;
         }
     }
+
     private Boolean ValidatePassword() {
         String val = password.getEditText().getText().toString();
 
@@ -127,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        MenuItem menuItem=menu.findItem(R.id.action_search);
-        SearchView searchView=(SearchView)menuItem.getActionView();
+        getMenuInflater().inflate(R.menu.menu, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setQueryHint("Type here to search");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
