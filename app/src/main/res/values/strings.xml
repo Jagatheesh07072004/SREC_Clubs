@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">mini3</string>
+    <string name="dashboard_title">Dashboard</string> />
+    <style name="expandedBarTextStyle" parent="AppTheme">
+        <item name="android:textSize">0sp</item>
+
+    </style>
 </resources>

@@ -16,6 +16,9 @@
             android:name=".events"
             android:exported="false" />
         <activity
+            android:name=".event"
+            android:exported="false" />
+        <activity
             android:name=".person"
             android:exported="false" />
         <activity
