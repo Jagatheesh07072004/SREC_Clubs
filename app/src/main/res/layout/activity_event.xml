@@ -3,30 +3,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:amdroid="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/black">
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-        app:title="@string/dashboard_title"
-        app:expandedTitleTextAppearance="@color/white">
+    android:background="@color/smokyWhite">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:contentScrim="@color/smokyWhite"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:title="@string/dashboard_title"
+                app:expandedTitleTextAppearance="@style/expandedBarTextStyle">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:background="@drawable/custom_app_bar_background"
+            android:paddingHorizontal="20dp"
+            android:orientation="vertical"
             >
+
+            <TextView
+                android:layout_marginTop="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_heading"
+                amdroid:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_sub_title"
+                amdroid:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:height="20dp"
+                android:background="@drawable/search_bar_background"
+                android:hint="@string/search_bar_hint"
+                android:paddingLeft="20dp"
+
+                android:textColorHint="@color/white" />
 
         </LinearLayout>
 
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="271dp"
-            android:background="@drawable/background"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:title="@string/dashboard_title"
+            app:titleTextColor="@android:color/white"
 
             ></androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
 
