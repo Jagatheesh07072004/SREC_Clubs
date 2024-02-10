@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="action_search" type="id" />
+    <item name="btnAddEvent" type="id" />
+    <item name="textViewEventName" type="id" />
+    <item name="textViewEventDate" type="id" />
+    <item name="textViewEventMonth" type="id" />
 </resources>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">mini3</string>
-    <string name="dashboard_title">Dashboard</string> />
+    <string name="dashboard_title">Dashboard</string>
+    />
 
     <string name="dashboard_heading">Find amazing events happening around you</string>
     <string name="dashboard_sub_title">480 events around you</string>

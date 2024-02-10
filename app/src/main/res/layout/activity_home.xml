@@ -172,10 +172,13 @@
 
 
                 <ImageView
+                    android:id="@+id/notification"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/not"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal"
+
+                    android:onClick="fifth"/>
 
                 <TextView
                     android:layout_width="wrap_content"
