@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout fullName, password;
     Button login;
     private FirebaseAuth firebaseAuth;
-    Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,15 +64,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        fullName = findViewById(R.id.fullname);
-        password = findViewById(R.id.passs1);
-        login = findViewById(R.id.loginButton);
+        fullName=findViewById(R.id.fullname);
+        password=findViewById(R.id.passs1);
+        login=findViewById(R.id.loginButton);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!ValidateFullname() | !ValidatePassword()) {
-                } else {
+                if(!ValidateFullname()|!ValidatePassword()){
+
+                }else{
+
                     loginUser();
                 }
             }
@@ -80,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loginUser() {
-        String userUserName = fullName.getEditText().getText().toString().trim();
-        String userPassword = password.getEditText().getText().toString().trim();
+    public void loginUser(){
+        String userUserName=fullName.getEditText().getText().toString().trim();
+        String userPassword=password.getEditText().getText().toString().trim();
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(userUserName, userPassword)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -98,34 +100,33 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
     }
 
-    private Boolean ValidateFullname() {
-        String val = fullName.getEditText().getText().toString();
+    private Boolean ValidateFullname(){
+        String val=fullName.getEditText().getText().toString();
 
-        if (val.isEmpty()) {
+        if (val.isEmpty()){
             fullName.setError("UserId cannot be Empty");
             return false;
-        } else {
+        }
+        else{
             fullName.setError(null);
             return true;
         }
     }
+    private Boolean ValidatePassword(){
+        String val=password.getEditText().getText().toString();
 
-    private Boolean ValidatePassword() {
-        String val = password.getEditText().getText().toString();
-
-        if (val.isEmpty()) {
+        if (val.isEmpty()){
             password.setError("Password cannot be Empty");
             return false;
-        } else {
+        }
+        else{
             password.setError(null);
             return true;
         }
     }
-
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -145,5 +146,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         return super.onCreateOptionsMenu(menu);
-    }
+    }*/
 }
