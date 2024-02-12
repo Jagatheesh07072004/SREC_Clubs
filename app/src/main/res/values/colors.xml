@@ -14,7 +14,9 @@
     <color name="deepBlue">#425186</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="timeBackgroundGreen">#e8feed</color>
+    <color name="greenJoinBtnColor">#00bb5a</color>
+    <color name="greyDate">#cdcfd1</color>
 
 
 
