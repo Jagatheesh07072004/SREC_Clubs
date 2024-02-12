@@ -16,9 +16,33 @@
         android:layout_height="wrap_content"
         android:hint="Event Date" />
 
+    <EditText
+        android:id="@+id/editTextEventTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextEventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+    <EditText
+        android:id="@+id/editTextEventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
+
+
+
     <Button
         android:id="@+id/btnSelectImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Image" />
+
+
 </LinearLayout>

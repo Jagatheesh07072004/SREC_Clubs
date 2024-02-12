@@ -1,14 +1,10 @@
-package com.example.mini3;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.mini3;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class event extends AppCompatActivity {
 
@@ -55,6 +49,9 @@ public class event extends AppCompatActivity {
         View dialogLayout = inflater.inflate(R.layout.activity_addevent, null);
         final EditText eventNameInput = dialogLayout.findViewById(R.id.editTextEventName);
         final EditText eventDateInput = dialogLayout.findViewById(R.id.editTextEventDate);
+        final EditText eventTimeInput = dialogLayout.findViewById(R.id.editTextEventLocation);
+        final EditText eventLocationInput = dialogLayout.findViewById(R.id.editTextEventLocation);
+        final EditText eventDescriptionInput = dialogLayout.findViewById(R.id.editTextEventDescription);
         final Button selectImageButton = dialogLayout.findViewById(R.id.btnSelectImage);
 
         builder.setView(dialogLayout);
@@ -65,7 +62,10 @@ public class event extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 String eventName = eventNameInput.getText().toString();
                 String eventDate = eventDateInput.getText().toString();
-                if (eventName.isEmpty() || eventDate.isEmpty() || selectedImageUri == null) {
+                String eventTime = eventTimeInput.getText().toString();
+                String eventLocation = eventLocationInput.getText().toString();
+                String eventDescription = eventDescriptionInput.getText().toString();
+                if (eventName.isEmpty() || eventDate.isEmpty() || eventTime.isEmpty() || eventLocation.isEmpty() || eventDescription.isEmpty() || selectedImageUri == null) {
                     Toast.makeText(event.this, "Please fill all fields and select an image", Toast.LENGTH_SHORT).show();
                 } else {
                     addEventToLayout(eventName, eventDate, selectedImageUri);
@@ -101,29 +101,23 @@ public class event extends AppCompatActivity {
         TextView eventDateTextView = eventItem.findViewById(R.id.textViewEventDate);
         eventDateTextView.setText(eventDate);
 
-        TextView eventMonthTextView = eventItem.findViewById(R.id.textViewEventMonth);
-        // Extract month from eventDate and set it to eventMonthTextView
-        String month = extractMonthFromString(eventDate);
-        eventMonthTextView.setText(month);
-
         ImageView eventImageView = eventItem.findViewById(R.id.card_image);
         eventImageView.setImageURI(imageUri);
 
         // Add event card to layout
         layout.addView(eventItem);
-    }
 
-    private String extractMonthFromString(String dateStr) {
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
-            Date date = sdf.parse(dateStr);
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(date);
-            return DateFormat.format("MMM", calendar).toString();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return "";
+        // Set click listener to navigate to detailed view
+        eventImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(event.this, join_event.class);
+                intent.putExtra("eventName", eventName);
+                intent.putExtra("eventDate", eventDate);
+                intent.putExtra("imageUri", imageUri.toString());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -134,3 +128,4 @@ public class event extends AppCompatActivity {
         }
     }
 }
+
