@@ -16,6 +16,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".homepage">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_app_bar_background"
+            android:drawableEnd="@drawable/search_btn"
+            android:height="60dp"
+            android:hint="search here"
+            android:paddingLeft="20dp"
+            android:paddingRight="5dp"
+            android:textColorHint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,13 +36,12 @@
             android:layout_marginEnd="20dp"
             android:drawableBottom="@drawable/fac"
             android:text="fac club"
+            android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="16dp"
-            />
+            tools:layout_editor_absoluteY="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,26 +50,29 @@
             android:layout_marginEnd="20dp"
             android:drawableBottom="@drawable/phoratz2"
             android:text="phoratz club"
-            android:textSize="20dp"
             android:textColor="@color/white"
+            android:textSize="20dp"
             android:textStyle="bold"
+            android:layout_marginTop="65dp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="15dp"
             tools:layout_editor_absoluteY="352dp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="561dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:drawableBottom="@drawable/tamil"
-            android:text="tamilmandram"
+            android:text="Tamilmandram club"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:layout_marginTop="65dp"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="775dp" />
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="352dp" />
+
 
 
     </LinearLayout>
