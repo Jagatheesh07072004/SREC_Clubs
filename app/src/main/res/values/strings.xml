@@ -8,4 +8,6 @@
     <string name="search_bar_hint">search for an event...</string>
     <string name="desc">This the best event. Participation Certificates will be provided</string>
     <string name="loc">Auditorium</string>
+    <string name="event_1">Event 1</string>
+    <string name="event_name">Event 1</string>
 </resources>
