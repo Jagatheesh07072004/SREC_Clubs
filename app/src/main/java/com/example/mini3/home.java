@@ -18,6 +18,8 @@ public class home extends AppCompatActivity {
     ImageView calbtn;
     ImageView event;
 
+    ImageView profilebtn;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -58,6 +60,13 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(home.this, event.class);
+                startActivity(intent);
+            }
+        });
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(home.this, profile.class);
                 startActivity(intent);
             }
         });
