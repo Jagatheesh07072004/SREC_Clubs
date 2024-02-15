@@ -215,6 +215,7 @@
 
 
                 <ImageView
+                    android:id="@+id/profile"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/baseline_person_24"
@@ -227,7 +228,9 @@
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"></TextView>
+                    android:textColor="@color/black">
+
+                </TextView>
 
 
             </LinearLayout>
