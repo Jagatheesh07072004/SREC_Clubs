@@ -30,6 +30,7 @@ public class home extends AppCompatActivity {
         event=findViewById(R.id.notification);
         profilebtn=findViewById(R.id.profile);
 
+
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
