@@ -11,7 +11,11 @@ public class home extends AppCompatActivity {
     ImageView homebtn;
     ImageView clublistbtn;
     ImageView calbtn;
-    ImageView event;
+
+
+    ImageView profilebtn;
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +24,15 @@ public class home extends AppCompatActivity {
         homebtn=findViewById(R.id.home);
         clublistbtn=findViewById(R.id.clublist);
         calbtn=findViewById(R.id.calendar);
-        event=findViewById(R.id.notification);
 
+        profilebtn=findViewById(R.id.profile);
 
 
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(home.this, homepage.class);
+                Intent intent=new Intent(home.this, event.class);
                 startActivity(intent);
             }
         });
@@ -46,14 +50,17 @@ public class home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        event.setOnClickListener(new View.OnClickListener() {
+
+        // Add any additional initialization or logic for the Home activity here
+
+        profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(home.this, event.class);
+            public void onClick(View v)
+            {
+                Intent intent=new Intent(home.this, profile.class);
                 startActivity(intent);
             }
         });
-        // Add any additional initialization or logic for the Home activity here
     }
 }
 

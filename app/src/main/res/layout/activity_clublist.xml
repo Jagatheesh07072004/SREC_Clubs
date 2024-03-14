@@ -49,8 +49,11 @@
       android:hint="search here"
       android:paddingLeft="20dp"
       android:paddingRight="5dp"
-      android:textColorHint="@color/white" />
+      android:textColorHint="@color/white"
+      android:searchResultHighlightColor="@color/white"
+      />
   <TextView
+      android:id="@+id/faclist"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
