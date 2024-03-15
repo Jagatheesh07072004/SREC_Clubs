@@ -28,7 +28,10 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
     def mdcVersion='1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
     implementation platform('com.google.firebase:firebase-bom:32.7.2')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-database'

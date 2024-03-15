@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!-- Allow cleartext traffic (unencrypted HTTP) -->
+    <base-config cleartextTrafficPermitted="true">
+
+    </base-config>
+
+
+    <!-- Define the domains that your app needs to connect to -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">example.com</domain>
+        <domain includeSubdomains="true">api.example.com</domain>
+        <!-- Add more domains as needed -->
+    </domain-config>
+</network-security-config>

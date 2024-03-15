@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 public class join_event extends AppCompatActivity {
 
     @Override
@@ -49,7 +51,11 @@ public class join_event extends AppCompatActivity {
             // Set image if available
             ImageView eventImageView = findViewById(R.id.eventImageView);
             if (imageUriString != null && !imageUriString.isEmpty()) {
-                eventImageView.setImageURI(Uri.parse(imageUriString));
+                // Load the image using Glide
+                Glide.with(this)
+                        .load(Uri.parse(imageUriString))
+                        .into(eventImageView);
+
                 // Add click listener to open the image in full size
                 eventImageView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -61,6 +67,7 @@ public class join_event extends AppCompatActivity {
                     }
                 });
             }
+
 
 
             // Handle result button click
