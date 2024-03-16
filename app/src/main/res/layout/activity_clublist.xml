@@ -72,6 +72,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/phoratz"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -90,6 +91,7 @@
       android:drawablePadding="20dp"
       tools:ignore="DuplicateIds" />
   <TextView
+      android:id="@+id/tamil"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -108,6 +110,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/quiz"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -126,6 +129,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/ncc"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -144,6 +148,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/redribbon"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -162,6 +167,7 @@
       android:drawablePadding="20dp"
       tools:ignore="InvalidId" />
   <TextView
+      android:id="@+id/nssclub"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -180,6 +186,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/yoga"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -198,6 +205,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/sports"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -216,6 +224,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/ace"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -234,6 +243,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/nature"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -252,6 +262,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/gdc"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -270,6 +281,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/fac"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -288,6 +300,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/uyir"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -306,6 +319,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/pc"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -324,6 +338,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/aero_modeling"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -342,6 +357,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/foss"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -360,6 +376,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/redcross"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -378,6 +395,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/social"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -396,6 +414,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/ai"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -414,6 +433,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/csi"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -432,6 +452,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/yuva"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -450,6 +471,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/nss"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -468,6 +490,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/els"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"
@@ -486,6 +509,7 @@
       android:drawablePadding="20dp"
       />
   <TextView
+      android:id="@+id/ready"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="10dp"

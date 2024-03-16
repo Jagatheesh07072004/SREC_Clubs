@@ -19,13 +19,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class event extends AppCompatActivity {
 
@@ -40,9 +47,20 @@ public class event extends AppCompatActivity {
         setContentView(R.layout.activity_event);
 
         FirebaseApp.initializeApp(this);
+        FirebaseMessaging.getInstance().subscribeToTopic("events"); // Subscribe to the "events" topic
+
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReference();
         btnAddEvent = findViewById(R.id.btnAddEvent);
+
+        // Check if user is authenticated and their email is jaga4305@gmail.com
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null && user.getEmail().equals("jaga4305@gmail.com")) {
+            btnAddEvent.setVisibility(View.VISIBLE);
+        } else {
+            btnAddEvent.setVisibility(View.GONE);
+            Toast.makeText(this, "You are not authorized to add events.", Toast.LENGTH_SHORT).show();
+        }
 
         btnAddEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,12 +144,27 @@ public class event extends AppCompatActivity {
 
                         // Display event in the layout
                         addEventToLayout(eventName, clubName, eventDate, eventTime, eventLocation, eventDescription, regLink, resLink, uri);
+
+                        // Send notification to all users
+                        sendEventNotification(eventName);
                     });
                 })
                 .addOnFailureListener(e -> {
                     // Handle image upload failure
                     Toast.makeText(event.this, "Failed to upload image.", Toast.LENGTH_SHORT).show();
                 });
+    }
+
+    private void sendEventNotification(String eventName) {
+        // Create notification message
+        Map<String, String> messageData = new HashMap<>();
+        messageData.put("title", "New Event Added!");
+        messageData.put("body", eventName + " has been added.");
+
+        // Send FCM message to the "events" topic
+        FirebaseMessaging.getInstance().send(new RemoteMessage.Builder("events")
+                .setData(messageData)
+                .build());
     }
 
     private void addEventToLayout(String eventName, String clubName, String eventDate, String eventTime, String eventLocation, String eventDescription, String regLink, String resLink, Uri imageUri) {
