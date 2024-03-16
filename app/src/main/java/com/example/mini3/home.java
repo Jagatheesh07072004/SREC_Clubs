@@ -4,40 +4,38 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.mini3.R;
-
 public class home extends AppCompatActivity {
-
     ImageView homebtn;
     ImageView clublistbtn;
     ImageView calbtn;
-    ImageView event;
+
+
     ImageView profilebtn;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         homebtn=findViewById(R.id.home);
         clublistbtn=findViewById(R.id.clublist);
         calbtn=findViewById(R.id.calendar);
-        event=findViewById(R.id.notification);
+
         profilebtn=findViewById(R.id.profile);
+
+
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(home.this, homepage.class);
+                Intent intent=new Intent(home.this, event.class);
                 startActivity(intent);
             }
         });
-
         clublistbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,16 +51,12 @@ public class home extends AppCompatActivity {
             }
         });
 
-        event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(home.this, event.class);
-                startActivity(intent);
-            }
-        });
+        // Add any additional initialization or logic for the Home activity here
+
         profilebtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent=new Intent(home.this, profile.class);
                 startActivity(intent);
             }
