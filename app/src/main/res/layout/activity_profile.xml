@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,58 +23,101 @@
         android:textSize="35dp"
         android:textStyle="bold" />
 
-    <TextView
+    <!-- Layout for displaying user information -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:orientation="vertical"
         android:layout_marginTop="340dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#DCD7E4"
-        android:gravity="left"
-        android:padding="20dp"
-        android:hint="Name             : Student_Name"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:drawablePadding="20dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="420dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#DCD7E4"
-        android:gravity="left"
-        android:padding="20dp"
-        android:hint="Roll Number : 71812201***"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:drawablePadding="20dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#DCD7E4"
-        android:gravity="left"
-        android:padding="20dp"
-        android:hint="Department  : CSE"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
+        android:background="#DCD7E4">
 
-        android:drawablePadding="20dp"
-        />
+        <!-- Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name               :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Student_Name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- Roll Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll Number   :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/rollNumberTextView"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="71812201***"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Department -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Department    :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/departmentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="CSE"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Logout Button -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
@@ -85,6 +127,6 @@
         android:text="Log out"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
 </RelativeLayout>
