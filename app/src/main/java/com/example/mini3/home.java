@@ -14,6 +14,7 @@ public class home extends AppCompatActivity {
 
 
     ImageView profilebtn;
+    ImageView seccutitybtn;
 
 
     @SuppressLint("MissingInflatedId")
@@ -26,6 +27,7 @@ public class home extends AppCompatActivity {
         calbtn=findViewById(R.id.calendar);
 
         profilebtn=findViewById(R.id.profile);
+        seccutitybtn=findViewById(R.id.securtiy);
 
 
 
@@ -39,14 +41,21 @@ public class home extends AppCompatActivity {
         clublistbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(home.this, clublist.class);
+                Intent intent=new Intent(home.this,clublist.class);
+                startActivity(intent);
+            }
+        });
+        seccutitybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(home.this,changepassword.class);
                 startActivity(intent);
             }
         });
         calbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(home.this, calendar.class);
+                Intent intent=new Intent(home.this,calendar.class);
                 startActivity(intent);
             }
         });

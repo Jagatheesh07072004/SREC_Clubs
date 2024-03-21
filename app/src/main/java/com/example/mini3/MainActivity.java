@@ -1,5 +1,6 @@
 package com.example.mini3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,16 +18,19 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class MainActivity extends AppCompatActivity {
+    Button fg;
 
     TextInputLayout fullName, password;
     Button login;
     private FirebaseAuth firebaseAuth;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        fg=findViewById(R.id.forgot);
 
 
         fullName=findViewById(R.id.fullname);
@@ -42,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
                     loginUser();
                 }
+            }
+        });
+        fg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, forgotpassword.class);
+                startActivity(intent);
             }
         });
 
