@@ -172,10 +172,10 @@
 
 
                 <ImageView
-                    android:id="@+id/notification"
+                    android:id="@+id/securtiy"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/not"
+                    android:src="@drawable/baseline_security_24"
                     android:layout_gravity="center_horizontal"
 
                     android:onClick="fifth"/>
@@ -183,7 +183,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notification"
+                    android:text="Secutity and Privacy"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"
